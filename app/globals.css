@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.back-pu {
+  background-color: #E4D4FF;
+}
+
+
+input[id="menuicon"] {
+  display: none;
+  position: relative;
+}
+
+input[id="menuicon"]+label {
+  display: block;
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+input[id="menuicon"]+label span {
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 6px;
+  border-radius: 30px;
+  background-color: #000;
+  transition: all .35s;
+}
+
+input[id="menuicon"]+label span:nth-child(1) {
+  top: 20%;
+}
+
+input[id="menuicon"]+label span:nth-child(2) {
+  bottom: 20%;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+  width: 450px;
+  height: 100%;
+  background-color: #ede9fe;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  z-index: 1;
+  transition: all .35s;
+}
+
+input[id="menuicon"]:checked+label+div {
+  right: 0;
+}
+
+
+

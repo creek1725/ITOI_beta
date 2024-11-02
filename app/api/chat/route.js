@@ -11,7 +11,7 @@ export async function POST(request) {
           'Content-Type': 'application/json',  // 요청 데이터 타입
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',  // 사용할 GPT 모델
+          model: 'gpt-4o-mini',  // 사용할 GPT 모델
           messages: [
             { role: 'system', content: '당신은 도움이 되는 발명 아이디어 브레인스토밍 비서입니다. 발명아이디어와 관련된 요청만 응답해야합니다. 최대 50글자'},  // GPT의 시스템 메시지 (옵션)
             { role: 'user', content: prompt }  // 사용자의 프롬프트
